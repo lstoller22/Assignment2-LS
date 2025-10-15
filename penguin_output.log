@@ -1,0 +1,55 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\lstoller\penguin_output.log
+  log type:  text
+ opened on:  15 Oct 2025, 09:29:03
+
+. 
+. //Descriptive Statistics 
+. summarize bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_lengt~m |        342    43.92193    5.459584       32.1       59.6
+bill_depth~m |        342    17.15117    1.974793       13.1       21.5
+flipper_le~m |        342    200.9152    14.06171        172        231
+ body_mass_g |        342    4201.754    801.9545       2700       6300
+
+. 
+. 
+. //Descriptive Statistics of bill by species
+. by species, sort : summarize bill_length_mm bill_depth_mm
+
+--------------------------------------------------------------------------------
+-> species = Adelie
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_lengt~m |        151    38.79139    2.663405       32.1         46
+bill_depth~m |        151    18.34636     1.21665       15.5       21.5
+
+--------------------------------------------------------------------------------
+-> species = Chinstrap
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_lengt~m |         68    48.83382    3.339256       40.9         58
+bill_depth~m |         68    18.42059    1.135395       16.4       20.8
+
+--------------------------------------------------------------------------------
+-> species = Gentoo
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+bill_lengt~m |        123    47.50488    3.081857       40.9       59.6
+bill_depth~m |        123    14.98211    .9812197       13.1       17.3
+
+
+. 
+. //close log
+. log close 
+      name:  <unnamed>
+       log:  C:\Users\lstoller\penguin_output.log
+  log type:  text
+ closed on:  15 Oct 2025, 09:29:03
+--------------------------------------------------------------------------------
